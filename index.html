@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>海天水务集团股份公司 - 2026年奖补项目申报清单</title>
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --primary-light: #2d5f8a;
+            --accent: #e8943a;
+            --accent-light: #f5b971;
+            --bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #6c7a89;
+            --border: #dce3ec;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #3498db;
+            --danger: #e74c3c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .header h1 span {
+            color: var(--accent-light);
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 12px;
+        }
+        .header-meta {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .nav {
+            background: var(--primary);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            padding: 14px 22px;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            flex-shrink: 0;
+        }
+        .nav a:hover, .nav a.active {
+            color: white;
+            background: rgba(255,255,255,0.05);
+            border-bottom-color: var(--accent);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 40px 60px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 120px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .card p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 22px 26px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+        }
+        .info-item .label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .info-item .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .badge-national { background: linear-gradient(135deg, #e74c3c22, #e74c3c11); color: #c0392b; border: 1px solid #e74c3c44; }
+        .badge-province { background: linear-gradient(135deg, #3498db22, #3498db11); color: #2471a3; border: 1px solid #3498db44; }
+        .badge-city { background: linear-gradient(135deg, #27ae6022, #27ae6011); color: #1e8449; border: 1px solid #27ae6044; }
+        .badge-other { background: linear-gradient(135deg, #8e44ad22, #8e44ad11); color: #6c3483; border: 1px solid #8e44ad44; }
+
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+        .biz-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .biz-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .biz-card .biz-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 14px;
+        }
+        .biz-card h4 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+        .biz-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            background: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 1600px;
+        }
+        thead th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        tbody tr:hover { background: #f0f5ff; }
+        tbody tr:last-child td { border-bottom: none; }
+        .level-tag {
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 12px; font-weight: 600; white-space: nowrap;
+        }
+        .level-national { background: #fde8e8; color: #c0392b; }
+        .level-province { background: #e8f0fe; color: #2471a3; }
+        .level-city { background: #e8f8e8; color: #1e8449; }
+        .level-district { background: #f3e8fd; color: #6c3483; }
+        .amount { font-weight: 700; color: var(--accent); font-size: 15px; }
+        .category-tag {
+            display: inline-block; padding: 2px 8px; border-radius: 4px;
+            font-size: 11px; font-weight: 500; background: #f0f0f0; color: #555;
+        }
+
+        .honor-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #f0e6ff, #e8daff);
+            color: #6c3483;
+            border: 1px solid #d4b8e8;
+            white-space: nowrap;
+        }
+
+        .tech-tag {
+            display: inline-block; padding: 2px 7px; border-radius: 4px;
+            font-size: 11px; font-weight: 500; background: #e8f4fd; color: #2471a3;
+            margin: 1px 2px; white-space: nowrap;
+        }
+        .tech-tag.ai { background: #fde8f4; color: #c0392b; }
+        .tech-tag.hw { background: #e8fde8; color: #1e8449; }
+        .tech-tag.sw { background: #f3e8fd; color: #6c3483; }
+
+        .mobile-cards { display: none; }
+
+        .m-project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .m-project-card .m-card-header {
+            padding: 16px 18px 12px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .m-project-card .m-card-header .m-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            flex: 1;
+        }
+        .m-project-card .m-card-header .m-seq {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--accent);
+            color: white; font-size: 13px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .m-project-card .m-card-body { padding: 4px 18px 16px; }
+        .m-field {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .m-field:last-child { border-bottom: none; }
+        .m-field .m-label {
+            min-width: 80px;
+            max-width: 80px;
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 600;
+            padding-top: 2px;
+            flex-shrink: 0;
+        }
+        .m-field .m-value {
+            flex: 1;
+            color: var(--text);
+            word-break: break-word;
+        }
+        .m-field .m-value.amount {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 16px;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .stat-card .stat-num {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+            width: 3px; background: linear-gradient(to bottom, var(--accent), var(--primary));
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 24px; padding: 18px 24px;
+            background: var(--card-bg); border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid var(--border);
+        }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -26px; top: 24px;
+            width: 14px; height: 14px; background: var(--accent);
+            border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-item .year { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+        .timeline-item h4 { font-size: 15px; color: var(--primary); margin-bottom: 6px; }
+        .timeline-item p { font-size: 13px; color: var(--text-light); }
+        .status-done { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #27ae6022; color: #27ae60; font-weight: 600; }
+
+        .policy-ref a {
+            color: var(--info); text-decoration: none; border-bottom: 1px dashed var(--info);
+            font-size: 13px; transition: all 0.2s; word-break: break-all;
+        }
+        .policy-ref a:hover { color: var(--primary); border-bottom-style: solid; }
+        .policy-card a {
+            color: var(--info); text-decoration: none; border-bottom: 1px dashed var(--info); transition: all 0.2s;
+        }
+        .policy-card a:hover { color: var(--primary); border-bottom-style: solid; }
+        .ext-icon { display: inline-block; font-size: 10px; margin-left: 2px; opacity: 0.6; }
+
+        .roadmap { margin-top: 24px; }
+        .roadmap-quarter {
+            display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;
+        }
+        .roadmap-label {
+            min-width: 72px; font-size: 14px; font-weight: 700; color: var(--primary);
+            padding-top: 6px; text-align: center; background: white; border-radius: 8px;
+            padding: 8px 4px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .roadmap-items { flex: 1; display: flex; flex-wrap: wrap; gap: 8px; }
+        .roadmap-item {
+            padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 500;
+            border: 1px solid; line-height: 1.5; max-width: 280px;
+        }
+        .roadmap-item.national { background: #fde8e811; border-color: #e74c3c44; color: #c0392b; }
+        .roadmap-item.province { background: #e8f0fe11; border-color: #3498db44; color: #2471a3; }
+        .roadmap-item.city { background: #e8f8e811; border-color: #27ae6044; color: #1e8449; }
+        .roadmap-item.district { background: #f3e8fd11; border-color: #8e44ad44; color: #6c3483; }
+
+        .unit-summary {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px; margin-top: 20px;
+        }
+        .unit-card {
+            background: white; border-radius: 10px; padding: 18px 20px;
+            border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .unit-card .unit-name { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .unit-card .unit-count {
+            font-size: 24px; font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .unit-card .unit-desc { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+
+        .lifecycle-bar {
+            margin-top: 20px; padding: 20px 24px; background: #f8f9fc;
+            border-radius: 10px; border: 1px solid var(--border);
+        }
+        .lifecycle-bar h4 { font-size: 14px; color: var(--primary); margin-bottom: 16px; font-weight: 600; }
+        .lifecycle-steps { display: flex; gap: 0; position: relative; }
+        .lifecycle-step { flex: 1; text-align: center; position: relative; padding: 0 4px; }
+        .lifecycle-step .bar { height: 8px; border-radius: 4px; margin-bottom: 10px; }
+        .lifecycle-step:nth-child(1) .bar { background: #3498db; }
+        .lifecycle-step:nth-child(2) .bar { background: #9b59b6; }
+        .lifecycle-step:nth-child(3) .bar { background: #27ae60; }
+        .lifecycle-step:nth-child(4) .bar { background: #e74c3c; }
+        .lifecycle-step .step-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+        .lifecycle-step .step-pct {
+            font-size: 18px; font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .contact-bar {
+            margin-top: 20px; padding: 16px 28px; background: white;
+            border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border); display: flex;
+            align-items: center; gap: 28px; flex-wrap: wrap;
+        }
+        .contact-bar-title {
+            font-size: 14px; font-weight: 700; color: var(--primary);
+            white-space: nowrap; padding-right: 12px; border-right: 2px solid var(--border);
+        }
+        .contact-bar-name { font-size: 18px; font-weight: 800; color: var(--primary); letter-spacing: 1px; }
+        .contact-bar-info { font-size: 13px; color: var(--text); }
+        .contact-bar-info .cb-label { color: var(--text-light); margin-right: 4px; }
+        .contact-bar-info a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; }
+        .contact-bar-info a:hover { color: var(--accent); }
+        .contact-bar-sep { width: 1px; height: 28px; background: var(--border); }
+
+        .collapse-group {
+            margin-top: 48px; padding-top: 32px; border-top: 2px dashed var(--border);
+        }
+        .collapse-group-title {
+            font-size: 16px; font-weight: 600; color: var(--text-light);
+            margin-bottom: 16px; text-align: center; letter-spacing: 2px;
+        }
+        .collapse-section {
+            margin-bottom: 12px; border-radius: 12px; overflow: hidden;
+            background: var(--card-bg); box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .collapse-section summary {
+            padding: 18px 28px; cursor: pointer; font-size: 16px; font-weight: 600;
+            color: var(--primary); display: flex; align-items: center; gap: 12px;
+            list-style: none; border-left: 4px solid var(--accent); transition: background 0.2s;
+        }
+        .collapse-section summary::-webkit-details-marker { display: none; }
+        .collapse-section summary:hover { background: #f8f9fc; }
+        .collapse-section summary::before {
+            content: '\25B6'; font-size: 12px; color: var(--accent);
+            transition: transform 0.3s; flex-shrink: 0;
+        }
+        .collapse-section[open] summary::before { transform: rotate(90deg); }
+        .collapse-section[open] summary { border-bottom: 1px solid var(--border); background: #f8f9fc; }
+        .collapse-section .collapse-body { padding: 24px 28px; animation: fadeSlideIn 0.3s ease; }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            background: var(--primary); color: rgba(255,255,255,0.7);
+            text-align: center; padding: 24px; font-size: 13px;
+        }
+
+        @media print {
+            .header, .nav, .filter-bar { position: static; }
+            .section { page-break-inside: avoid; }
+            .collapse-section { break-inside: avoid; }
+            .mobile-cards { display: none !important; }
+        }
+
+        @media (max-width: 1024px) {
+            .container { padding: 20px 20px 48px; }
+            .header-inner { padding: 16px 20px; flex-direction: column; gap: 6px; align-items: flex-start; }
+            .header h1 { font-size: 20px; }
+            .header h1 span { display: block; margin-left: 0; margin-top: 4px; font-size: 14px; }
+            .header-meta { font-size: 12px; }
+            .nav-inner { padding: 0 12px; }
+            .nav a { padding: 12px 16px; font-size: 13px; }
+            .table-wrapper { display: none; }
+            .mobile-cards { display: block; }
+            .section-title { font-size: 18px; }
+            .section-title .icon { width: 28px; height: 28px; font-size: 14px; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .stat-card { padding: 18px; }
+            .stat-card .stat-num { font-size: 28px; }
+            .roadmap-quarter { flex-direction: column; gap: 8px; }
+            .roadmap-label { min-width: auto; text-align: left; padding: 8px 14px; display: flex; gap: 8px; align-items: center; }
+            .roadmap-item { max-width: 100%; }
+            .unit-summary { grid-template-columns: repeat(2, 1fr); }
+            .card { padding: 20px 22px; }
+            .collapse-section summary { padding: 16px 20px; font-size: 15px; }
+            .collapse-section .collapse-body { padding: 20px; }
+            .timeline { padding-left: 24px; }
+            .timeline-item { padding: 14px 18px; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 16px 12px 40px; }
+            .header-inner { padding: 14px 16px; }
+            .header h1 { font-size: 18px; }
+            .header h1 span { font-size: 13px; }
+            .nav-inner { padding: 0 8px; }
+            .nav a { padding: 10px 14px; font-size: 12px; }
+            .section { margin-bottom: 28px; }
+            .section-title { font-size: 17px; margin-bottom: 16px; padding-bottom: 10px; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
+            .stat-card { padding: 14px 10px; }
+            .stat-card .stat-num { font-size: 24px; }
+            .stat-card .stat-label { font-size: 11px; }
+            .filter-bar { gap: 6px; margin-bottom: 16px; }
+            .filter-btn { padding: 6px 14px; font-size: 12px; min-height: 40px; }
+            .m-project-card { margin-bottom: 14px; }
+            .m-project-card .m-card-header { padding: 14px 14px 10px; }
+            .m-project-card .m-card-header .m-title { font-size: 14px; }
+            .m-project-card .m-card-body { padding: 2px 14px 14px; }
+            .m-field { padding: 8px 0; font-size: 13px; }
+            .m-field .m-label { min-width: 70px; max-width: 70px; font-size: 11px; }
+            .roadmap-quarter { margin-bottom: 10px; }
+            .roadmap-items { gap: 6px; }
+            .roadmap-item { font-size: 11px; padding: 6px 10px; }
+            .unit-summary { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .unit-card { padding: 14px 16px; }
+            .unit-card .unit-count { font-size: 20px; }
+            .unit-card .unit-name { font-size: 12px; }
+            .unit-card .unit-desc { font-size: 11px; }
+            .card { padding: 18px 16px; border-radius: 10px; }
+            .card h3 { font-size: 15px; margin-bottom: 10px; }
+            .card p { font-size: 14px; line-height: 1.75; }
+            .contact-bar { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 18px; }
+            .contact-bar-sep { display: none; }
+            .contact-bar-name { font-size: 16px; }
+            .lifecycle-bar { padding: 16px 14px; }
+            .lifecycle-step .step-label { font-size: 11px; }
+            .lifecycle-step .step-pct { font-size: 15px; }
+            .info-grid { grid-template-columns: 1fr; gap: 12px; }
+            .info-item { padding: 16px 18px; }
+            .info-item .value { font-size: 14px; }
+            .biz-grid { grid-template-columns: 1fr; gap: 12px; }
+            .badge { padding: 6px 12px; font-size: 12px; }
+            .collapse-section summary { padding: 14px 16px; font-size: 14px; }
+            .collapse-section .collapse-body { padding: 16px; }
+            .timeline { padding-left: 20px; }
+            .timeline-item { padding: 12px 16px; margin-bottom: 16px; }
+            .timeline-item::before { left: -20px; width: 12px; height: 12px; top: 20px; }
+            .footer { padding: 18px 12px; font-size: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 12px 8px 32px; }
+            .header-inner { padding: 12px 12px; }
+            .header h1 { font-size: 16px; }
+            .header h1 span { font-size: 12px; }
+            .header-meta { font-size: 11px; }
+            .nav a { padding: 10px 12px; font-size: 11px; }
+            .section-title { font-size: 15px; gap: 8px; }
+            .section-title .icon { width: 24px; height: 24px; font-size: 12px; border-radius: 6px; }
+            .stats-bar { gap: 8px; margin-bottom: 16px; }
+            .stat-card { padding: 12px 8px; }
+            .stat-card .stat-num { font-size: 20px; }
+            .stat-card .stat-label { font-size: 10px; }
+            .filter-btn { padding: 5px 10px; font-size: 11px; min-height: 36px; }
+            .m-project-card .m-card-header { padding: 12px 12px 8px; }
+            .m-project-card .m-card-header .m-title { font-size: 13px; }
+            .m-project-card .m-card-body { padding: 0 12px 12px; }
+            .m-field { padding: 7px 0; font-size: 12px; }
+            .m-field .m-label { min-width: 62px; max-width: 62px; font-size: 10px; }
+            .m-field .m-value.amount { font-size: 14px; }
+            .roadmap-label { padding: 6px 10px; font-size: 12px; }
+            .roadmap-item { font-size: 10px; padding: 5px 8px; }
+            .unit-summary { grid-template-columns: 1fr; }
+            .card { padding: 14px 12px; }
+            .card h3 { font-size: 14px; }
+            .card p { font-size: 13px; }
+            .lifecycle-step .step-label { font-size: 10px; }
+            .lifecycle-step .step-pct { font-size: 14px; }
+            .contact-bar { padding: 12px 14px; }
+            .contact-bar-title { font-size: 13px; }
+            .contact-bar-name { font-size: 15px; }
+            .contact-bar-info { font-size: 12px; }
+            .info-item { padding: 14px 14px; }
+            .info-item .label { font-size: 10px; }
+            .info-item .value { font-size: 13px; }
+            .badge { padding: 5px 10px; font-size: 11px; }
+            .collapse-section summary { padding: 12px 14px; font-size: 13px; gap: 8px; }
+            .collapse-section .collapse-body { padding: 14px 12px; }
+            .timeline { padding-left: 16px; }
+            .timeline-item { padding: 10px 12px; }
+            .timeline-item .year { font-size: 12px; }
+            .timeline-item h4 { font-size: 13px; }
+            .timeline-item p { font-size: 12px; }
+            .footer { font-size: 11px; padding: 16px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-inner">
+        <h1>海天水务集团股份公司 <span>2026年度奖补项目申报清单</span></h1>
+        <div class="header-meta">编制日期：2026-09-04</div>
+    </div>
+    <div class="nav">
+        <div class="nav-inner">
+            <a href="#projects" class="active">可申报项目清单</a>
+            <a href="#policy">政策依据汇总</a>
+            <a href="#tips">重要提示</a>
+            <a href="#company">企业详情 &#9660;</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section" id="projects">
+        <div class="section-title">
+            <div class="icon">1</div>
+            2026年可申报奖补项目清单
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-num">6</div>
+                <div class="stat-label">可申报项目总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">~7000</div>
+                <div class="stat-label">预计奖补总额（万元）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">4</div>
+                <div class="stat-label">资金类项目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">2</div>
+                <div class="stat-label">荣誉类项目</div>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterTable('all')">全部</button>
+            <button class="filter-btn" onclick="filterTable('national')">国家级</button>
+            <button class="filter-btn" onclick="filterTable('province')">省级</button>
+            <button class="filter-btn" onclick="filterTable('city')">市级</button>
+            <button class="filter-btn" onclick="filterTable('district')">区级</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="projectTable">
+                <thead>
+                    <tr>
+                        <th style="width:40px">序号</th>
+                        <th style="min-width:180px">可申报项目名称</th>
+                        <th style="min-width:100px">项目类别</th>
+                        <th style="min-width:110px">归口部门</th>
+                        <th style="min-width:80px">申报层级</th>
+                        <th style="min-width:80px">申报周期</th>
+                        <th style="min-width:100px">预计奖补金额（万元）</th>
+                        <th style="min-width:120px">关键技术方向</th>
+                        <th style="min-width:220px">申报核心条件</th>
+                        <th style="min-width:200px">所需材料</th>
+                        <th style="min-width:200px">政策依据（官方文件）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-level="national">
+                        <td data-label="序号">1</td>
+                        <td data-label="项目名称"><strong>超长期特别国债（城市供排水管网及设施更新改造）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">基础设施·城市更新</span></td>
+                        <td data-label="归口部门">国家发展改革委、住房城乡建设部（四川省发改委、住建厅组织申报）</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">2026年（批次申报，须纳入国家"两重"项目清单及住建部门实施方案）</td>
+                        <td data-label="预计奖补" class="amount">约4500</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">供水管网更新</span>
+                            <span class="tech-tag ai">智慧水务</span>
+                        </td>
+                        <td data-label="核心条件">支持城市供水、排水等地下管网更新改造及智慧监测系统建设（含污水治理的综合类项目可纳入）；项目须纳入住建部门《城市地下管网管廊及设施建设改造实施方案》与国家"两重"项目清单，前期手续（立项、可研、用地、环评等）完备；四川属西部地区，补助比例可至核定投资较高比例。公司"资阳市供水基础设施韧性升级与数智化建设项目"（总投资2.74亿元）、"简阳海天数智化供水及综合效能提升工程"（总投资2.21亿元）等在建供水管网更新与数智化项目匹配度高，建议会同属地政府打包申报。</td>
+                        <td data-label="所需材料">资金申请报告、项目可研及批复文件、规划/用地/环评手续、管网实施方案入库证明、投资完成情况与资金落实凭证。</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://swt.sc.gov.cn/sccom/bwxx/2025/12/31/7f40b2d527d946cb8752d379ec1abd77.shtml" target="_blank" rel="noopener">国家发展改革委 财政部《关于2026年实施大规模设备更新和消费品以旧换新政策的通知》（发改环资〔2025〕1745号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">2</td>
+                        <td data-label="项目名称"><strong>中央预算内投资·污染治理专项（城镇污水污泥处理及资源化设施）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">节能环保</span></td>
+                        <td data-label="归口部门">国家发展改革委（环资司），经省市发改委逐级申报</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">2026年（年度申报，在建项目进度不超过50%）</td>
+                        <td data-label="预计奖补" class="amount">约1500</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">污水处理</span>
+                            <span class="tech-tag sw">污泥资源化</span>
+                        </td>
+                        <td data-label="核心条件">支持城镇污水收集处理和污泥处理设施、城镇污水管网新建和改造、污水资源化利用设施建设；四川属西部地区且处于长江经济带重点战略区域，补助比例最高可达项目总投资的70%（单个项目原则上不超过1亿元）；项目须前期手续齐全、为计划新开工或在建项目（不得用于已完工项目），未获其他中央预算内投资。公司"夹江县城市生活污水处理厂扩建项目"（总投资1.1亿元，在建）及拟实施的污泥处置、再生水利用设施项目匹配该方向。</td>
+                        <td data-label="所需材料">资金申请报告、全国投资项目在线审批监管平台项目代码、立项/用地/环评等前期手续、投资估算及资金落实证明、绩效目标申报表。</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20373" target="_blank" rel="noopener">国家发展改革委《污染治理中央预算内投资专项管理办法》（发改环资规〔2024〕337号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">3</td>
+                        <td data-label="项目名称"><strong>全国重点用水企业水效领跑者遴选（供水业务）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">节水·荣誉认定</span></td>
+                        <td data-label="归口部门">工业和信息化部、水利部等（四川省经信厅、水利厅组织推荐）</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">按国家年度通知开展（供水企业以管网漏损率等核心指标参评）</td>
+                        <td data-label="预计奖补"><span class="honor-tag">荣誉类项目</span></td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">节水降耗</span>
+                            <span class="tech-tag ai">分区计量</span>
+                        </td>
+                        <td data-label="核心条件">全国重点用水企业水效领跑者面向供水企业等重点用水单位，参评须在供水管网漏损控制、分区计量、压力调控等水效指标方面处于行业领先水平。公司运营资阳、简阳、乐山、峨眉山等多地供水项目，持续推动智慧水务与管网分区计量建设，具备申报基础；获评后对品牌与后续节水项目资金争取均有加分。</td>
+                        <td data-label="所需材料">水效领跑者申报书、供水管网漏损率及水效指标佐证、智慧水务建设成效材料、第三方核验报告。</td>
+                        <td data-label="政策依据" class="policy-ref">工业和信息化部办公厅 水利部办公厅 国家发展改革委办公厅 市场监管总局办公厅《关于组织开展重点用水企业水效领跑者遴选工作的通知》</td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">4</td>
+                        <td data-label="项目名称"><strong>污水处理绿色低碳标杆厂遴选建设</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">节能环保·标杆示范</span></td>
+                        <td data-label="归口部门">国家发展改革委、住房城乡建设部（四川省发改、住建部门推荐）</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">按国家批次通知开展（对标绿色低碳标杆改造提升后申报）</td>
+                        <td data-label="预计奖补"><span class="honor-tag">荣誉类项目</span></td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">减污降碳</span>
+                            <span class="tech-tag sw">工艺提标</span>
+                        </td>
+                        <td data-label="核心条件">国家组织开展污水处理绿色低碳标杆厂遴选与建设，围绕能耗药耗下降、再生水利用、碳排放降低等指标树立行业标杆，入选厂区可优先获得绿色低碳改造相关支持。公司运营近200座环保设施、拥有成熟污水处理运营体系与减污降碳技术积累，可遴选符合条件的污水厂（如提标扩能后的夹江、蒲江等厂区）对标参选。</td>
+                        <td data-label="所需材料">标杆厂申报材料、污水处理厂能耗药耗及出水水质达标佐证、再生水利用与碳减排测算、运营管理成效证明。</td>
+                        <td data-label="政策依据" class="policy-ref">国家发展改革委办公厅 住房城乡建设部办公厅《关于开展污水处理绿色低碳标杆厂遴选建设工作的通知》</td>
+                    </tr>
+                    <tr data-level="province">
+                        <td data-label="序号">5</td>
+                        <td data-label="项目名称"><strong>四川省大规模设备更新支持（供排水设施改造与智改数转）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">数字化转型·设备更新</span></td>
+                        <td data-label="归口部门">四川省经济和信息化厅、住房城乡建设厅、省财政厅</td>
+                        <td data-label="申报层级"><span class="level-tag level-province">省级</span></td>
+                        <td data-label="申报周期">2026年（年度分批评审，四川工业企业服务平台/部门申报通知）</td>
+                        <td data-label="预计奖补" class="amount">约1000</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag ai">智改数转</span>
+                            <span class="tech-tag hw">设备更新</span>
+                        </td>
+                        <td data-label="核心条件">统筹省级资金支持住建等领域设施改造和设备更新；对智改数转类单个项目按不超过项目设备（含软件）投资额20%、节能环保降碳类按不超过固定资产（含软件）投资额15%给予支持，单个项目最高2000万元。公司"资阳数智化供水""简阳数智供水"项目中的软件与数智化设备投入，以及各污水处理厂提标扩能设备购置，可分别按智改数转、节能环保降碳方向申报省级资金。</td>
+                        <td data-label="所需材料">项目申报书、备案文件、设备（含软件）购置合同与发票清单、投资完成凭证、绩效目标说明。</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://fgw.sc.gov.cn/sfgw/qtwj/2026/2/12/86a8dc863f7048b8b17d3cf2e0a1d143.shtml" target="_blank" rel="noopener">四川省发展改革委 财政厅《四川省2026年实施大规模设备更新和消费品以旧换新政策措施》（川发改环资〔2026〕47号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="province">
+                        <td data-label="序号">6</td>
+                        <td data-label="项目名称"><strong>四川省重点研发计划（生态环境领域）/ 生态环境保护科技联合专项</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">科技创新</span></td>
+                        <td data-label="归口部门">四川省科学技术厅（联合省生态环境厅）、省财政厅</td>
+                        <td data-label="申报层级"><span class="level-tag level-province">省级</span></td>
+                        <td data-label="申报周期">按年度指南申报（四川省科技管理信息系统；2026年度农资环领域与生态环境保护科技联合专项申报窗口已于8月5日截止，宜作下一年度重点储备）</td>
+                        <td data-label="预计奖补" class="amount">约100</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag sw">水处理技术</span>
+                            <span class="tech-tag ai">智慧管控</span>
+                        </td>
+                        <td data-label="核心条件">省重点研发计划（农资环领域）生态环境方向支持水污染防治与生态修复技术、固废危废处置与资源化利用技术、新污染物监测与治理、碳达峰碳中和、环境监测与智慧管控等；另有省科技厅与省生态环境厅联合发布的生态环境保护科技联合专项。申报单位须为省内注册法人、具备较强研发基础，公司拥有国家认定企业技术中心、承担国家及省部级项目32项，契合度高，可围绕污水处理低碳运行、再生水与膜技术、智慧水务等方向组织申报。</td>
+                        <td data-label="所需材料">项目申报书（四川省科技管理信息系统线上填报）、指南对应佐证材料、单位研发基础证明。</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://kjj.cngy.gov.cn/New/Detail/8720103658c8454d8ca60127c6d9e385.html" target="_blank" rel="noopener">四川省科学技术厅《关于发布2026年农资环领域重点研发计划项目申报指南的通知》；四川省科学技术厅 四川省生态环境厅《关于发布2026年四川省生态环境保护科技联合专项项目申报指南的通知》<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mobile-cards" id="mobileCards">
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">1</div>
+                    <div class="m-title">超长期特别国债（城市供排水管网及设施更新改造）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">基础设施·城市更新</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发展改革委、住房城乡建设部（四川省发改委、住建厅组织申报）</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">2026年（批次申报，须纳入国家"两重"项目清单及住建部门实施方案）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">约4500万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag hw">供水管网更新</span><span class="tech-tag ai">智慧水务</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">支持城市供水、排水等地下管网更新改造及智慧监测系统建设（含污水治理的综合类项目可纳入）；项目须纳入住建部门管网实施方案与国家"两重"项目清单，前期手续完备；四川属西部地区，补助比例可至核定投资较高比例。公司"资阳市供水基础设施韧性升级与数智化建设项目"（2.74亿元）、"简阳海天数智化供水及综合效能提升工程"（2.21亿元）等在建项目匹配度高，建议会同属地政府打包申报。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">资金申请报告、项目可研及批复文件、规划/用地/环评手续、管网实施方案入库证明、投资完成情况与资金落实凭证。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://swt.sc.gov.cn/sccom/bwxx/2025/12/31/7f40b2d527d946cb8752d379ec1abd77.shtml" target="_blank" rel="noopener">国家发展改革委 财政部《关于2026年实施大规模设备更新和消费品以旧换新政策的通知》（发改环资〔2025〕1745号）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">2</div>
+                    <div class="m-title">中央预算内投资·污染治理专项（城镇污水污泥处理及资源化设施）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">节能环保</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发展改革委（环资司），经省市发改委逐级申报</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">2026年（年度申报，在建项目进度不超过50%）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">约1500万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag hw">污水处理</span><span class="tech-tag sw">污泥资源化</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">支持城镇污水收集处理和污泥处理设施、污水管网新建和改造、污水资源化利用设施建设；四川属西部地区且处于长江经济带重点战略区域，补助比例最高可达项目总投资的70%（单个项目原则上不超过1亿元）；项目须前期手续齐全、为计划新开工或在建项目，未获其他中央预算内投资。公司"夹江县城市生活污水处理厂扩建项目"（1.1亿元，在建）及拟实施的污泥处置、再生水利用设施项目匹配该方向。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">资金申请报告、在线平台项目代码、立项/用地/环评等前期手续、投资估算及资金落实证明、绩效目标申报表。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20373" target="_blank" rel="noopener">国家发展改革委《污染治理中央预算内投资专项管理办法》（发改环资规〔2024〕337号）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">3</div>
+                    <div class="m-title">全国重点用水企业水效领跑者遴选（供水业务）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">节水·荣誉认定</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">工业和信息化部、水利部等（四川省经信厅、水利厅组织推荐）</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">按国家年度通知开展（供水企业以管网漏损率等核心指标参评）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value"><span class="honor-tag">荣誉类项目</span></div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag hw">节水降耗</span><span class="tech-tag ai">分区计量</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">全国重点用水企业水效领跑者面向供水企业等重点用水单位，参评须在供水管网漏损控制、分区计量、压力调控等水效指标方面处于行业领先水平。公司运营资阳、简阳、乐山、峨眉山等多地供水项目，持续推动智慧水务与管网分区计量建设，具备申报基础；获评后对品牌与后续节水项目资金争取均有加分。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">水效领跑者申报书、供水管网漏损率及水效指标佐证、智慧水务建设成效材料、第三方核验报告。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">工业和信息化部办公厅 水利部办公厅 国家发展改革委办公厅 市场监管总局办公厅《关于组织开展重点用水企业水效领跑者遴选工作的通知》</div></div>
+                </div>
+            </div>
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">4</div>
+                    <div class="m-title">污水处理绿色低碳标杆厂遴选建设</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">节能环保·标杆示范</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发展改革委、住房城乡建设部（四川省发改、住建部门推荐）</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">按国家批次通知开展（对标绿色低碳标杆改造提升后申报）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value"><span class="honor-tag">荣誉类项目</span></div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag hw">减污降碳</span><span class="tech-tag sw">工艺提标</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">国家组织开展污水处理绿色低碳标杆厂遴选与建设，围绕能耗药耗下降、再生水利用、碳排放降低等指标树立行业标杆，入选厂区可优先获得绿色低碳改造相关支持。公司运营近200座环保设施、拥有成熟污水处理运营体系与减污降碳技术积累，可遴选符合条件的污水厂（如提标扩能后的夹江、蒲江等厂区）对标参选。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">标杆厂申报材料、污水处理厂能耗药耗及出水水质达标佐证、再生水利用与碳减排测算、运营管理成效证明。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">国家发展改革委办公厅 住房城乡建设部办公厅《关于开展污水处理绿色低碳标杆厂遴选建设工作的通知》</div></div>
+                </div>
+            </div>
+            <div class="m-project-card" data-level="province">
+                <div class="m-card-header">
+                    <div class="m-seq">5</div>
+                    <div class="m-title">四川省大规模设备更新支持（供排水设施改造与智改数转）</div>
+                    <span class="level-tag level-province">省级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">数字化转型·设备更新</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">四川省经济和信息化厅、住房城乡建设厅、省财政厅</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">2026年（年度分批评审，四川工业企业服务平台/部门申报通知）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">约1000万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag ai">智改数转</span><span class="tech-tag hw">设备更新</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">统筹省级资金支持住建等领域设施改造和设备更新；对智改数转类单个项目按不超过项目设备（含软件）投资额20%、节能环保降碳类按不超过固定资产（含软件）投资额15%给予支持，单个项目最高2000万元。公司"资阳数智化供水""简阳数智供水"项目中的软件与数智化设备投入，以及各污水处理厂提标扩能设备购置，可分别按智改数转、节能环保降碳方向申报省级资金。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">项目申报书、备案文件、设备（含软件）购置合同与发票清单、投资完成凭证、绩效目标说明。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://fgw.sc.gov.cn/sfgw/qtwj/2026/2/12/86a8dc863f7048b8b17d3cf2e0a1d143.shtml" target="_blank" rel="noopener">四川省发展改革委 财政厅《四川省2026年实施大规模设备更新和消费品以旧换新政策措施》（川发改环资〔2026〕47号）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+            <div class="m-project-card" data-level="province">
+                <div class="m-card-header">
+                    <div class="m-seq">6</div>
+                    <div class="m-title">四川省重点研发计划（生态环境领域）/ 生态环境保护科技联合专项</div>
+                    <span class="level-tag level-province">省级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">科技创新</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">四川省科学技术厅（联合省生态环境厅）、省财政厅</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">按年度指南申报（四川省科技管理信息系统；2026年度农资环领域与生态环境保护科技联合专项申报窗口已于8月5日截止，宜作下一年度重点储备）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">约100万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value"><span class="tech-tag sw">水处理技术</span><span class="tech-tag ai">智慧管控</span></div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">省重点研发计划（农资环领域）生态环境方向支持水污染防治与生态修复技术、固废危废处置与资源化利用技术、新污染物监测与治理、碳达峰碳中和、环境监测与智慧管控等；另有省科技厅与省生态环境厅联合发布的生态环境保护科技联合专项。申报单位须为省内注册法人、具备较强研发基础，公司拥有国家认定企业技术中心、承担国家及省部级项目32项，契合度高，可围绕污水处理低碳运行、再生水与膜技术、智慧水务等方向组织申报。</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">项目申报书（四川省科技管理信息系统线上填报）、指南对应佐证材料、单位研发基础证明。</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://kjj.cngy.gov.cn/New/Detail/8720103658c8454d8ca60127c6d9e385.html" target="_blank" rel="noopener">四川省科学技术厅《关于发布2026年农资环领域重点研发计划项目申报指南的通知》；四川省科学技术厅 四川省生态环境厅《关于发布2026年四川省生态环境保护科技联合专项项目申报指南的通知》<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#128197; 申报规划路线图（按时间窗口）</h3>
+            <div class="roadmap">
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q1<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">1-3月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item province"><strong>&#9316;</strong> 四川省设备更新省级资金申报<br><span style="opacity:0.7">年度评审启动 | 经信/住建条线</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q2<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">4-6月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9312;</strong> 超长期特别国债（供排水管网）<br><span style="opacity:0.7">批次申报 | 纳入"两重"清单</span></div>
+                        <div class="roadmap-item national"><strong>&#9313;</strong> 污染治理专项中央预算内投资<br><span style="opacity:0.7">年度申报 | 省市发改委</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q3<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">7-9月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9312;</strong> 国债"两重"批次申报（滚动）<br><span style="opacity:0.7">动态批次 | 发改·住建</span></div>
+                        <div class="roadmap-item national"><strong>&#9314;</strong> 水效领跑者申报准备<br><span style="opacity:0.7">按国家通知 | 工信·水利</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">全年<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">持续</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9315;</strong> 绿色低碳标杆污水厂对标申报<br><span style="opacity:0.7">按国家批次 | 发改·住建</span></div>
+                        <div class="roadmap-item province"><strong>&#9316;</strong> 污水处理厂设备更新（节能环保类15%）<br><span style="opacity:0.7">滚动 | 省级资金</span></div>
+                        <div class="roadmap-item province"><strong>&#9317;</strong> 四川省重点研发/环保联合专项<br><span style="opacity:0.7">2027年度储备 | 科技厅</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#127970; 归口部门项目分布</h3>
+            <div class="unit-summary">
+                <div class="unit-card">
+                    <div class="unit-name">国家发展改革委</div>
+                    <div class="unit-count">2</div>
+                    <div class="unit-desc">供排水管网国债 / 污染治理中央预算内</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">国家发改委·住建部</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">污水处理绿色低碳标杆厂遴选</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">工信·水利（节水条线）</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">水效领跑者遴选</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">四川省发改·经信·住建</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">"两新"设施改造与智改数转省级资金</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">四川省科学技术厅</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">重点研发 / 生态环境保护科技联合专项</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="policy">
+        <div class="section-title">
+            <div class="icon">2</div>
+            政策依据汇总
+        </div>
+
+        <div class="card policy-card">
+            <h3>国家级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://swt.sc.gov.cn/sccom/bwxx/2025/12/31/7f40b2d527d946cb8752d379ec1abd77.shtml" target="_blank" rel="noopener">国家发展改革委 财政部《关于2026年实施大规模设备更新和消费品以旧换新政策的通知》（发改环资〔2025〕1745号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20373" target="_blank" rel="noopener">国家发展改革委《污染治理中央预算内投资专项管理办法》（发改环资规〔2024〕337号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>3.</strong> 工业和信息化部办公厅 水利部办公厅 国家发展改革委办公厅 市场监管总局办公厅《关于组织开展重点用水企业水效领跑者遴选工作的通知》
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>4.</strong> 国家发展改革委办公厅 住房城乡建设部办公厅《关于开展污水处理绿色低碳标杆厂遴选建设工作的通知》
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>四川省省级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://fgw.sc.gov.cn/sfgw/qtwj/2026/2/12/86a8dc863f7048b8b17d3cf2e0a1d143.shtml" target="_blank" rel="noopener">四川省发展改革委 财政厅《四川省2026年实施大规模设备更新和消费品以旧换新政策措施》（川发改环资〔2026〕47号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://kjj.cngy.gov.cn/New/Detail/8720103658c8454d8ca60127c6d9e385.html" target="_blank" rel="noopener">四川省科学技术厅《关于发布2026年农资环领域重点研发计划项目申报指南的通知》；四川省科学技术厅 四川省生态环境厅《关于发布2026年四川省生态环境保护科技联合专项项目申报指南的通知》<span class="ext-icon">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>申报渠道提示</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>说明：</strong> 城市供排水管网类项目一般由属地政府统筹或特许经营项目公司会同行业主管部门申报，须先行纳入住建部门城市地下管网管廊及设施建设改造实施方案和国家"两重"项目库；中央预算内与省级设备更新资金分别经省市发改、经信部门逐级申报；省重点研发计划通过四川省科技管理信息系统申报。同一建设内容不得重复申报不同中央资金渠道，申报前请与属地发展改革、住房城乡建设、科技部门充分对接。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="tips">
+        <div class="card" style="background: #fffbeb; border-color: #f5deb3;">
+            <h3 style="color: #b8860b;">&#9888;&#65039; 重要提示</h3>
+            <p style="font-size: 13px; color: #8b7355; margin-top: 8px;">
+                本清单所列信息基于公开资料整理，仅供参考。具体申报条件、奖补金额和时间节点以各级主管部门发布的最新官方文件为准。建议企业密切关注国家发展改革委、住房城乡建设部、四川省发展改革委、经济和信息化厅、住房城乡建设厅、科学技术厅及成都、资阳、简阳、夹江等地发改、水务部门的年度申报通知，提前做好项目储备与材料准备。预计奖补金额为基于公开政策及企业实际投资规模的保守预估值，可能因政策调整而变化；标注为"荣誉类项目"的条目以获得国家资质认定、行业标杆称号为主要价值，直接资金奖励较少。城市供排水管网国债与中央预算内投资（污染治理专项）等中央资金渠道针对同一建设内容不得重复申报，建议按"供水管网类走国债、污水污泥设施类走污染治理专项"统筹申报口径，优先做好项目入库储备，并加强与属地政府及主管部门的联动。
+            </p>
+            <div class="lifecycle-bar">
+                <h4>&#128203; 项目申报全生命周期</h4>
+                <div class="lifecycle-steps">
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">项目申报</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">评审批复</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">资金下达</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step" style="flex: 2;">
+                        <div class="bar"></div>
+                        <div class="step-label">结项验收</div>
+                        <div class="step-pct">40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-bar">
+            <div class="contact-bar-title">&#128222; 项目咨询联系人</div>
+            <div class="contact-bar-name">赵璐红</div>
+            <div class="contact-bar-info">
+                <span class="cb-label">舍得酒业</span> &middot; 共享公共服务中心总经理
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">电话</span> <a href="tel:18884606786">18884606786</a>
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">地址</span> 四川省成都市武侯区复地复城国际T1
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse-group" id="company">
+        <div class="collapse-group-title">&#9660; 企业详情（点击展开） &#9660;</div>
+
+        <details class="collapse-section">
+            <summary>&#127970; 企业概述</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>海天水务集团股份公司（A股：海天股份 603759.SH）成立于2008年3月，总部位于四川天府新区，注册资本4.62亿元，2021年3月在上海证券交易所A股主板上市，是当年四川首家A股主板上市的民营企业。公司以水务环保起家，已发展成为水务环保与新能源新材料双主业驱动的绿色产业集团：水务板块在特许经营区域内提供供水、污水处理及配套水务设施工程施工服务，运营管理近200座环保设施，业务覆盖全国20余个省、市；2025年完成对贺利氏光伏的收购，切入光伏导电浆料（新能源新材料）赛道并成为重要业务板块。公司连续多年上榜"四川民营企业100强"，员工约1900人，2025年实现营业收入32.19亿元。公司拥有国家认定企业技术中心、国家级博士后科研工作站两大国家级研发平台，承担国家重点研发计划、省部级重大科技专项等32项，主导或参与制定国家标准、团体标准35项，累计获得国际及国家专利154项，荣获"中国环保产业协会环境技术进步奖一等奖""四川省科技进步奖一等奖"等17项省部级以上科技奖励，是国家级环保行业标杆企业。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="label">企业全称</div>
+                        <div class="value">海天水务集团股份公司</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">证券简称</div>
+                        <div class="value">海天股份（603759.SH）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">成立与上市</div>
+                        <div class="value">2008年成立，2021年A股主板上市</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">注册资本</div>
+                        <div class="value">4.62亿元</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">所在地</div>
+                        <div class="value">四川天府新区（中国（四川）自贸试验区）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">2025年营收</div>
+                        <div class="value">32.19亿元</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#9881; 主营业务</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>公司围绕"水务环保 + 新能源新材料"双主业布局，水务板块深耕供排水特许经营，持续推动智慧水务建设与绿色低碳运营，同时以工程建设、固废处理、管道直饮水等业务延伸产业链，形成"一主多元"的大环保格局。</p>
+                </div>
+                <div class="biz-grid">
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8f4fd;">&#128167;</div>
+                        <h4>供排水业务</h4>
+                        <p>在资阳、简阳、乐山、峨眉山等地特许经营区域内提供供水与污水处理服务，持续推进智慧水务建设，运营管理近200座环保设施。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8fde8;">&#127919;</div>
+                        <h4>新能源新材料</h4>
+                        <p>2025年完成对贺利氏光伏的收购，以光伏导电浆料为核心，以AI驱动新材料生态，成为公司新的业务增长极。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #fde8f4;">&#127795;</div>
+                        <h4>固废处理与循环利用</h4>
+                        <p>通过收购布局垃圾焚烧发电（山西汾阳、四川达州等项目，合计处理能力1950吨/日）及污泥处置等固废资源化业务。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #f3e8fd;">&#128300;</div>
+                        <h4>管道直饮水与工程服务</h4>
+                        <p>布局高品质管道直饮水新赛道，具备大型水厂、污水厂及管网项目设计、采购、施工一体化（EPC/EPC+O）能力。</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#127942; 已获得的资质与荣誉</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <h3>国家级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-national">&#127942; 国家认定企业技术中心</span>
+                        <span class="badge badge-national">&#127942; 国家技术创新示范企业</span>
+                        <span class="badge badge-national">&#127942; 国家级博士后科研工作站</span>
+                        <span class="badge badge-other">&#11088; 中国环保产业协会环境技术进步奖一等奖</span>
+                        <span class="badge badge-other">&#11088; 国家/省部级重点项目33项</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>省市级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-province">&#127942; 四川省科技进步奖一等奖</span>
+                        <span class="badge badge-other">&#127942; 四川省建设创新型企业</span>
+                        <span class="badge badge-other">&#127942; 四川民营企业100强</span>
+                        <span class="badge badge-other">&#128161; 154项国际及国家专利</span>
+                        <span class="badge badge-other">&#128161; 参编国家标准、团体标准35项</span>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#128203; 近三年项目申请情况（2024-2026）</summary>
+            <div class="collapse-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2025年</div>
+                        <h4>贺利氏光伏收购与新能源新材料布局</h4>
+                        <p>完成对贺利氏光伏的收购，进军光伏导电浆料赛道；同年完成四川达州垃圾焚烧发电项目收购，垃圾处理能力增至1950吨/日。 <span class="status-done">已完成</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2025-2026年</div>
+                        <h4>夹江县城市生活污水处理厂扩建项目</h4>
+                        <p>总投资1.1亿元，在建（已投资约0.28亿元），建成后进一步提升区域污水处理能力。 <span class="status-done">在建</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2026年启动</div>
+                        <h4>资阳·简阳数智化供水改造项目</h4>
+                        <p>"资阳市供水基础设施韧性升级与数智化建设项目"（总投资2.74亿元）、"简阳海天数智化供水及综合效能提升工程"（总投资2.21亿元）启动实施，建设资金已通过可转债等渠道筹集。 <span class="status-done">实施中</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2026年</div>
+                        <h4>奖补资金集中申报</h4>
+                        <p>围绕在建供排水项目统筹申报超长期特别国债、中央预算内投资与省级设备更新资金，同步对标申报水效领跑者、绿色低碳标杆厂等荣誉。 <span class="status-done">进行中</span></p>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+
+</div>
+
+<div class="footer">
+    海天水务集团股份公司 &middot; 2026年度奖补项目申报清单 &middot; 编制日期：2026-09-04
+</div>
+
+<script>
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    function filterTable(level) {
+        const tableRows = document.querySelectorAll('#projectTable tbody tr');
+        tableRows.forEach(row => {
+            row.style.display = (level === 'all' || row.dataset.level === level) ? '' : 'none';
+        });
+        const mobileCards = document.querySelectorAll('#mobileCards .m-project-card');
+        mobileCards.forEach(card => {
+            card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';
+        });
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section, .collapse-group');
+        const navLinks = document.querySelectorAll('.nav a');
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    document.querySelector('.nav a[href="#company"]').addEventListener('click', function() {
+        setTimeout(() => {
+            document.querySelectorAll('.collapse-section').forEach(d => d.open = true);
+        }, 400);
+    });
+</script>
+
+</body>
+</html>
